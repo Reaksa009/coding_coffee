@@ -1,0 +1,45 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Battambang:wght@300;400;700&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    :lang(kh) {
+        font-family: "Battambang", "Inter", sans-serif;
+    }
+
+    :lang(kh) .font-cafe {
+        font-family: "Battambang", "Playfair Display", serif;
+        font-weight: 700;
+    }
+}
+
+@layer components {
+    .btn-primary {
+        @apply bg-coffee-dark text-white px-6 py-3 rounded-lg hover:bg-coffee transition duration-300 font-semibold;
+    }
+
+    .btn-secondary {
+        @apply border-2 border-coffee-dark text-coffee-dark px-6 py-3 rounded-lg hover:bg-coffee-dark hover:text-white transition duration-300 font-semibold;
+    }
+
+    .nav-link {
+        @apply text-gray-700 hover:text-coffee transition;
+    }
+
+    .nav-link.active {
+        @apply text-coffee-dark font-semibold;
+    }
+
+    .language-notification {
+        transform: translateY(100%);
+        opacity: 0;
+    }
+
+    .language-notification.translate-y-0 {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
