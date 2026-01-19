@@ -32,6 +32,9 @@
         }
     },
     "scripts": {
+        "scripts": {
+            "build": "npm install --ignore-platform && your-build-command"
+        },
         "setup": [
             "composer install",
             "@php -r \"file_exists('.env') || copy('.env.example', '.env');\"",
